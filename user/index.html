@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN HORIZON</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Dynamic Background -->
+    <div id="three-background"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        
+        <nav class="navbar">
+            <div class="logo">GREEN HORIZON</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#" id="nav-dashboard">Dashboard</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="glow-text">Protect Earth. Save the Future.</h1>
+                <p>Your eco-friendly companion in waste management</p>
+                <a href="#features" class="cta-btn">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about fade-in" id="about">
+        <div class="about-content">
+            <h2>About Green Horizon</h2>
+            <p>A revolutionary platform designed to manage waste efficiently and promote sustainability.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features fade-in" id="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <!-- Pickup Card -->
+            <div class="feature-card popup-trigger" data-popup="pickup-form">
+                <i class="fas fa-recycle"></i>
+                <h3>Pickup</h3>
+                <p>Effortlessly segregate and recycle waste with our intuitive tools.</p>
+            </div>
+            <!-- Waste Reporting Card -->
+            <div class="feature-card popup-trigger" data-popup="report-form">
+                <i class="fas fa-leaf"></i>
+                <h3>Waste Reporting</h3>
+                <p>Promote sustainable practices and reduce your carbon footprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pickup Form Popup -->
+    <div id="pickup-form" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Schedule Pickup</h2>
+            <form id="pickup-form-content">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address (for pickup):</label>
+                <input type="text" id="address" name="address" required>
+
+                <!-- Waste Items Container -->
+                <div id="waste-items-container">
+                    <div class="waste-item">
+                        <label for="waste-type-0">Type of Waste:</label>
+                        <select id="waste-type-0" name="waste-type[]">
+                            <option value="plastic">Plastic</option>
+                            <option value="paper">Paper</option>
+                            <option value="metal">Metal</option>
+                            <option value="glass">Glass</option>
+                        </select>
+
+                        <label for="quantity-0">Quantity (in kg):</label>
+                        <input type="number" id="quantity-0" name="quantity[]" min="1" required>
+                    </div>
+                </div>
+
+                <!-- Add More Waste Button -->
+                <button type="button" id="add-waste-item" class="add-more-btn">+ Add Another Waste Item</button>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="pickup-time">Pickup Time:</label>
+                <select id="pickup-time" name="pickup-time" required>
+                    <option value="" disabled selected>Select a time slot</option>
+                    <option value="09:00 AM - 11:00 AM">09:00 AM - 11:00 AM</option>
+                    <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM</option>
+                    <option value="01:00 PM - 03:00 PM">01:00 PM - 03:00 PM</option>
+                    <option value="03:00 PM - 05:00 PM">03:00 PM - 05:00 PM</option>
+                    <option value="05:00 PM - 07:00 PM">05:00 PM - 07:00 PM</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Waste Reporting Form Popup -->
+    <div id="report-form" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Report Waste</h2>
+            <form id="report-form-content">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <label for="severity">Severity Level:</label>
+                <select id="severity" name="severity">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <!-- Photo Upload Option -->
+                <label for="photo-upload">Upload Photo</label>
+                <input type="file" id="photo-upload" name="photo-upload" accept="image/*" required>
+
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Impact Section -->
+    <section class="impact fade-in" id="impact">
+        <div class="impact-content">
+            <h2>Worldwide Impact</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>10,000+</h3>
+                    <p>Tons of Waste Recycled</p>
+                </div>
+                <div class="stat">
+                    <h3>2M+</h3>
+                    <p>CO2 Saved</p>
+                </div>
+                <div class="stat">
+                    <h3>500K+</h3>
+                    <p>Renewable Energy Generated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact fade-in" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <p>&copy; 2025 Green Horizon. All rights reserved.</p>
+    </footer>
+
+    <!-- Mini Popup Modal for Dashboard -->
+    <div class="mini-popup" id="mini-popup">
+        <div class="mini-popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>User Dashboard</h3>
+            <div class="user-info">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Address:</strong> 123 Eco Street, Green City</p>
+            </div>
+             <!-- Pickup History Section -->
+        <div class="pickup-history">
+            <h4>Pickup History</h4>
+            <div class="history-container">
+                <!-- Pickup history items will be dynamically added here -->
+            </div>
+        </div>
+            <button class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Link to JavaScript -->
+   
+    <script src="index.js"></script>
+</body>
+</html>

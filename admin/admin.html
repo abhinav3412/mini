@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | GREEN HORIZON</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="admin.css">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="admin-logo">GREEN HORIZON</div>
+        <ul class="admin-nav">
+            <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#users"><i class="fas fa-users"></i> Users</a></li>
+            <li><a href="#pickups"><i class="fas fa-truck"></i> Waste Pickups</a></li>
+            <li><a href="#reports"><i class="fas fa-flag"></i> Waste Reports</a></li>
+            <li><a href="#analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Admin Main Content -->
+    <main class="admin-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="admin-section">
+            <h2>Dashboard</h2>
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <h3>10,000+</h3>
+                    <p>Tons of Waste Recycled</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2M+</h3>
+                    <p>CO2 Saved</p>
+                </div>
+                <div class="stat-card">
+                    <h3>500K+</h3>
+                    <p>Renewable Energy Generated</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users" class="admin-section">
+            <h2>User Management</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>+1 234 567 890</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td>+1 987 654 321</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Waste Pickups Section -->
+        <section id="pickups" class="admin-section">
+            <h2>Waste Pickup Requests</h2>
+            <table class="pickup-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>123 Eco Street, Green City</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="approve-btn">Approve</button>
+                            <button class="reject-btn">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>456 Green Lane, Eco Town</td>
+                        <td>Approved</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Waste Reports Section -->
+        <section id="reports" class="admin-section">
+            <h2>Waste Reports</h2>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Severity</th>
+                        <th>Photo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Green Park</td>
+                        <td>Illegal dumping of plastic waste</td>
+                        <td>High</td>
+                        <td><img src="waste-photo.jpg" alt="Waste Photo" class="report-photo"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="admin-section">
+            <h2>Analytics</h2>
+            <canvas id="wasteChart"></canvas>
+        </section>
+    </main>
+
+    <!-- Link to JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

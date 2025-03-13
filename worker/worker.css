@@ -1,0 +1,162 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+  }
+  
+  /* Worker Sidebar */
+  .worker-sidebar {
+    width: 250px;
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .worker-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .worker-nav {
+    list-style: none;
+  }
+  
+  .worker-nav li {
+    margin-bottom: 1rem;
+  }
+  
+  .worker-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .worker-nav a:hover {
+    background: #00ff99;
+    color: #000;
+  }
+  
+  /* Worker Main Content */
+  .worker-content {
+    margin-left: 250px;
+    padding: 2rem;
+    width: calc(100% - 250px);
+  }
+  
+  .worker-section {
+    margin-bottom: 2rem;
+  }
+  
+  .worker-stats {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .stat-card {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-card p {
+    font-size: 1rem;
+  }
+  
+  /* Tables */
+  .task-table,
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .task-table th,
+  .report-table th {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .task-table td,
+  .report-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .complete-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .complete-btn:hover {
+    background: #218838;
+  }
+  
+  /* Profile Form */
+  .profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .profile-form input {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  #edit-profile {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  #edit-profile:hover {
+    background: #0056b3;
+  }
